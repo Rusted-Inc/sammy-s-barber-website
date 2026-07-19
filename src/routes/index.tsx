@@ -12,9 +12,6 @@ import photo9 from "@/assets/photo-9.png.asset.json";
 import photo10 from "@/assets/photo-10.png.asset.json";
 
 const hero = photo2.url;
-const fadeImg = photo6.url;
-const shaveImg = photo5.url;
-const beardImg = photo7.url;
 const gallery = [photo1, photo2, photo3, photo8, photo9, photo10, photo5, photo6, photo7, photo4];
 
 export const Route = createFileRoute("/")({
