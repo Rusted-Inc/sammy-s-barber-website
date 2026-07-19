@@ -1,9 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone, MapPin, Clock, Star, Scissors, Award, Users } from "lucide-react";
-import hero from "@/assets/hero.jpg";
-import fadeImg from "@/assets/fade.jpg";
-import shaveImg from "@/assets/shave.jpg";
-import beardImg from "@/assets/beard.jpg";
+import photo1 from "@/assets/photo-1.png.asset.json";
+import photo2 from "@/assets/photo-2.png.asset.json";
+import photo3 from "@/assets/photo-3.png.asset.json";
+import photo4 from "@/assets/photo-4.png.asset.json";
+import photo5 from "@/assets/photo-5.png.asset.json";
+import photo6 from "@/assets/photo-6.png.asset.json";
+import photo7 from "@/assets/photo-7.png.asset.json";
+import photo8 from "@/assets/photo-8.png.asset.json";
+import photo9 from "@/assets/photo-9.png.asset.json";
+import photo10 from "@/assets/photo-10.png.asset.json";
+
+const hero = photo2.url;
+const gallery = [photo1, photo2, photo3, photo8, photo9, photo10, photo5, photo6, photo7, photo4];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,12 +69,13 @@ const ADDRESS = "9217 17th Ave S Ste 120, Bloomington, MN 55425";
 const MAPS = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Sammy's Barber Shop " + ADDRESS)}`;
 
 const services = [
-  { name: "Signature Haircut", desc: "Custom cut tailored to your style — scissor or clipper.", img: fadeImg },
-  { name: "Skin Fade", desc: "Sharp, seamless fades — low, mid, high or bald.", img: null },
-  { name: "Beard Trim & Shape", desc: "Precision beard sculpting with scissors and razor detailing.", img: beardImg },
-  { name: "Hot Towel Shave", desc: "Classic straight razor shave with hot towels and aftercare.", img: shaveImg },
-  { name: "Head Shave", desc: "Smooth, close head shave finished with soothing balm.", img: null },
-  { name: "Kids & Seniors", desc: "Children's cuts and Senior Citizen discount always available.", img: null },
+  { name: "Signature Haircut", desc: "Custom cut tailored to your style — scissor or clipper.", img: photo5.url },
+  { name: "Skin Fade", desc: "Sharp, seamless fades — low, mid, high or bald.", img: photo6.url },
+  { name: "Beard Trim & Shape", desc: "Precision beard sculpting with scissors and razor detailing.", img: photo7.url },
+  { name: "Hair Designs", desc: "Custom hair art, stars, logos — signature freestyle designs.", img: photo3.url },
+  { name: "Kids Cuts", desc: "Patient, careful cuts for the little ones — all ages welcome.", img: photo4.url },
+  { name: "Freestyle Art", desc: "Stars, honeycomb, letters — bring a reference or trust the vision.", img: photo10.url },
+
 ];
 
 const allServices = [
@@ -106,6 +116,7 @@ function Home() {
           <nav className="hidden gap-8 text-sm font-medium text-muted-foreground md:flex">
             <a href="#services" className="hover:text-primary">Services</a>
             <a href="#about" className="hover:text-primary">About</a>
+            <a href="#gallery" className="hover:text-primary">Gallery</a>
             <a href="#reviews" className="hover:text-primary">Reviews</a>
             <a href="#visit" className="hover:text-primary">Visit</a>
           </nav>
@@ -253,10 +264,10 @@ function Home() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:py-28 md:grid-cols-2">
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src={shaveImg}
-              alt="Hot towel shave at Sammy's"
-              width={1200}
-              height={900}
+              src={photo1.url}
+              alt="Star hair design at Sammy's"
+              width={800}
+              height={800}
               loading="lazy"
               className="h-full w-full object-cover"
             />
@@ -299,6 +310,29 @@ function Home() {
           ))}
         </div>
       </section>
+
+      {/* Gallery */}
+      <section id="gallery" className="border-t border-border/60 bg-card/20">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28">
+          <div className="mb-10 flex flex-col gap-3">
+            <span className="text-xs uppercase tracking-[0.3em] text-primary">The Work</span>
+            <h2 className="font-display text-4xl sm:text-6xl">Straight from the chair.</h2>
+          </div>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
+            {gallery.map((g, i) => (
+              <div key={i} className="group relative aspect-square overflow-hidden rounded-xl border border-border">
+                <img
+                  src={g.url}
+                  alt={`Sammy's Barber Shop work ${i + 1}`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Visit */}
       <section id="visit" className="border-t border-border/60 bg-card/30">
