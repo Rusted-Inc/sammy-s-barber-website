@@ -72,12 +72,13 @@ const ADDRESS = "9217 17th Ave S Ste 120, Bloomington, MN 55425";
 const MAPS = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Sammy's Barber Shop " + ADDRESS)}`;
 
 const services = [
-  { name: "Signature Haircut", desc: "Custom cut tailored to your style — scissor or clipper.", img: fadeImg },
-  { name: "Skin Fade", desc: "Sharp, seamless fades — low, mid, high or bald.", img: null },
-  { name: "Beard Trim & Shape", desc: "Precision beard sculpting with scissors and razor detailing.", img: beardImg },
-  { name: "Hot Towel Shave", desc: "Classic straight razor shave with hot towels and aftercare.", img: shaveImg },
-  { name: "Head Shave", desc: "Smooth, close head shave finished with soothing balm.", img: null },
-  { name: "Kids & Seniors", desc: "Children's cuts and Senior Citizen discount always available.", img: null },
+  { name: "Signature Haircut", desc: "Custom cut tailored to your style — scissor or clipper.", img: photo5.url },
+  { name: "Skin Fade", desc: "Sharp, seamless fades — low, mid, high or bald.", img: photo6.url },
+  { name: "Beard Trim & Shape", desc: "Precision beard sculpting with scissors and razor detailing.", img: photo7.url },
+  { name: "Hair Designs", desc: "Custom hair art, stars, logos — signature freestyle designs.", img: photo3.url },
+  { name: "Kids Cuts", desc: "Patient, careful cuts for the little ones — all ages welcome.", img: photo4.url },
+  { name: "Freestyle Art", desc: "Stars, honeycomb, letters — bring a reference or trust the vision.", img: photo10.url },
+
 ];
 
 const allServices = [
