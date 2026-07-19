@@ -1,9 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone, MapPin, Clock, Star, Scissors, Award, Users } from "lucide-react";
-import hero from "@/assets/hero.jpg";
-import fadeImg from "@/assets/fade.jpg";
-import shaveImg from "@/assets/shave.jpg";
-import beardImg from "@/assets/beard.jpg";
+import photo1 from "@/assets/photo-1.png.asset.json";
+import photo2 from "@/assets/photo-2.png.asset.json";
+import photo3 from "@/assets/photo-3.png.asset.json";
+import photo4 from "@/assets/photo-4.png.asset.json";
+import photo5 from "@/assets/photo-5.png.asset.json";
+import photo6 from "@/assets/photo-6.png.asset.json";
+import photo7 from "@/assets/photo-7.png.asset.json";
+import photo8 from "@/assets/photo-8.png.asset.json";
+import photo9 from "@/assets/photo-9.png.asset.json";
+import photo10 from "@/assets/photo-10.png.asset.json";
+
+const hero = photo2.url;
+const fadeImg = photo6.url;
+const shaveImg = photo5.url;
+const beardImg = photo7.url;
+const gallery = [photo1, photo2, photo3, photo8, photo9, photo10, photo5, photo6, photo7, photo4];
 
 export const Route = createFileRoute("/")({
   head: () => ({
