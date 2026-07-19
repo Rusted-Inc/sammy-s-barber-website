@@ -266,10 +266,10 @@ function Home() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:py-28 md:grid-cols-2">
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src={shaveImg}
-              alt="Hot towel shave at Sammy's"
-              width={1200}
-              height={900}
+              src={photo1.url}
+              alt="Star hair design at Sammy's"
+              width={800}
+              height={800}
               loading="lazy"
               className="h-full w-full object-cover"
             />
