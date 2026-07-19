@@ -313,6 +313,29 @@ function Home() {
         </div>
       </section>
 
+      {/* Gallery */}
+      <section id="gallery" className="border-t border-border/60 bg-card/20">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28">
+          <div className="mb-10 flex flex-col gap-3">
+            <span className="text-xs uppercase tracking-[0.3em] text-primary">The Work</span>
+            <h2 className="font-display text-4xl sm:text-6xl">Straight from the chair.</h2>
+          </div>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
+            {gallery.map((g, i) => (
+              <div key={i} className="group relative aspect-square overflow-hidden rounded-xl border border-border">
+                <img
+                  src={g.url}
+                  alt={`Sammy's Barber Shop work ${i + 1}`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* Visit */}
       <section id="visit" className="border-t border-border/60 bg-card/30">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:py-28 md:grid-cols-2">
