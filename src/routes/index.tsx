@@ -116,6 +116,7 @@ function Home() {
           <nav className="hidden gap-8 text-sm font-medium text-muted-foreground md:flex">
             <a href="#services" className="hover:text-primary">Services</a>
             <a href="#about" className="hover:text-primary">About</a>
+            <a href="#gallery" className="hover:text-primary">Gallery</a>
             <a href="#reviews" className="hover:text-primary">Reviews</a>
             <a href="#visit" className="hover:text-primary">Visit</a>
           </nav>
